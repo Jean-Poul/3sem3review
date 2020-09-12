@@ -5,11 +5,11 @@
   - flow1 week3 tuesday exercise
   - flow1 week3 wednesday exercise
   - flow1 week3 thursday exercise
-  - flow1 week3 friday exercise
+  - flow1 week3 thursday exercise
 -------------------------------------------------------------------------------------------------
 ###### Monday: 
 
-https://github.com/Jean-Poul/travisGettingStarted  </br>
+https://github.com/Jean-Poul/travisGettingStarted
 https://github.com/Jean-Poul/rest-jpa-devops-startcode
 - (Setup of our first projects with travis. NOTE that these folders in this repository only have a reference to the projects since they are made on another repository)
 
@@ -30,11 +30,12 @@ https://github.com/Jean-Poul/3sem3review/tree/master/04_Thursday/domproject/src/
 
 ###### Friday: 
 
-https://www.jplm.dk/devops-starter/
+https://jplm.dk/devops-starter-1.0.1/
 
-- (To use REST endpoints type the commands shown below, when viewing, the given friday link)
+- (To use REST endpoints type the commands shown below when viewing from friday link)
 - api/movie/count - count of database records
 - api/movie/all - all database records.
 - api/movie/ + (a number) - view a record on a specific id
 - api/movie/title/ + (title) - view a record from a title
 
+- alternative go to https://jplm.dk/devops-starter-1.0.1/ and use links from there
