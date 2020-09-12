@@ -32,7 +32,7 @@ https://github.com/Jean-Poul/3sem3review/tree/master/04_Thursday/domproject/src/
 
 https://www.jplm.dk/devops-starter/
 
-- (To use REST endpoints type the commands shown below when viewing from friday link)
+- (To use REST endpoints type the commands shown below, when viewing, the given friday link)
 - api/movie/count - count of database records
 - api/movie/all - all database records.
 - api/movie/ + (a number) - view a record on a specific id
