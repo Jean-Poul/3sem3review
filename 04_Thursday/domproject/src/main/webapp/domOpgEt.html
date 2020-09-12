@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First time using DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="first">div1</div>
+         <div id="second">div2</div>
+          <div id="third">div3</div>
+          <button onclick="changediv()">Click me</button>
+          
+          <a href="index.html" style="float: right;">go to index</a>
+        <script>
+            var divs = document.getElementsByTagName("div");
+            for(var i = 0; i < divs.length; i++) {
+                if(i === 0) {
+                    divs[i].style.backgroundColor = "blue";
+                } else {
+                divs[i].style.backgroundColor = "red";
+            }
+        }
+        
+        function changediv() {
+            document.getElementById("first").style.backgroundColor = "red";
+            document.getElementById("second").style.backgroundColor = "yellow";
+            document.getElementById("third").style.backgroundColor = "green";
+        }
+        
+        </script>
+    </body>
+</html>

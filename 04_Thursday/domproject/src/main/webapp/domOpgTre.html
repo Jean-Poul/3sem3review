@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Using map to create lists</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="addUlList()">
+        <div></div>
+
+
+        <form onsubmit="addToList(); return false">
+            <label for="fname">Indtast fornavn</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <input type="submit" value="Submit">
+        </form> 
+        <button onclick="removeFirst()">Remove first entry</button>
+        <button onclick="removeLast()">Remove last entry</button>
+
+        <p></p>
+        <a href="index.html" style="float: right;">go to index</a>
+    </body>
+    <script>
+        var names = ["Peter", "lars", "Ole", "Janne", "hanne", "Sanne"];
+        function addUlList() {
+
+            var ulElem = document.createElement("ul");
+            var namesToHtmlList = "<ul id=\"ulListe\">" + names.map(function (name) {
+                return "<li>" + name + "</li>";
+            }).join("") + "</ul>";
+            ulElem.innerHTML = namesToHtmlList;
+            document.body.appendChild(ulElem);
+        }
+
+        function addToList() {
+            var nytNavn = document.getElementById("fname").value;
+            names.push(nytNavn);
+            var ul = document.getElementById("ulListe")
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(nytNavn));
+            ul.appendChild(li);
+        }
+
+        function removeFirst() {
+            names.shift();
+            var liste = document.getElementById("ulListe");
+            liste.removeChild(liste.firstChild);
+        }
+
+        function removeLast() {
+            names.pop();
+            var liste = document.getElementById("ulListe");
+            liste.removeChild(liste.lastElementChild);
+        }
+
+
+    </script>
+</body>
+</html>

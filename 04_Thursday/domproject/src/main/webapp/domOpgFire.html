@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Table</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    </head>
+    <body onload="add()">
+        <div class="container">
+            <h1>Table over cars</h1>
+        </div>
+
+        <div class="container">
+            <table id="carTable" class="table">
+
+            </table>
+        </div>
+
+        <div class="container">
+
+            <label for="price">Price:</label>
+            <input type="number" id="price">
+            <button class="btn btn-primary" id="priceBelow">Price is less than</button>
+            <p id="message"></p>
+
+        </div>
+        <a href="index.html" style="float: right;">go to index</a>
+        <script>
+            var cars = [
+                {id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000},
+                {id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900},
+                {id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000},
+                {id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799},
+                {id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799}
+            ];
+
+            function add() {
+                var carsToHtmlTable = "<thead><tr><th>id</th><th>Year</th><th>Make</th><th>Model</th><th>Price</th></tr></thead><tbody>" + cars.map(function (car) {
+                    return "<tr><td>" + car.id + "</td><td>" + car.year + "</td><td>" + car.make + "</td><td>" + car.model + "</td><td>" + car.price + "</td></tr>";
+                }).join("") + "</tbody";
+
+                var liste = document.getElementById("carTable");
+                liste.innerHTML = carsToHtmlTable;
+                document.body.appendChild(liste);
+            }
+
+            var priceBelow = document.getElementById("priceBelow");
+
+            priceBelow.onclick = function () {
+                var price = document.getElementById("price").value;
+                if (isNaN(price)) {
+                    document.getElementById("message").innerHTML = price + " is not a number";
+                } else if (price < 0) {
+                    document.getElementById("message").innerHTML = price + " is less than zero";
+                } else {
+                    //document.getElementById("message").innerHTML = price;
+                    var newcars = cars.filter(car => car.price < price);
+                    carsToHtmlTable = "<thead><tr><th>id</th><th>Year</th><th>Make</th><th>Model</th><th>Price</th></tr></thead><tbody>" + newcars.map(function (car) {
+                        return "<tr><td>" + car.id + "</td><td>" + car.year + "</td><td>" + car.make + "</td><td>" + car.model + "</td><td>" + car.price + "</td></tr>";
+                    }).join("") + "</tbody";
+                    document.getElementById("carTable").innerHTML = carsToHtmlTable;
+
+                    document.getElementById("message").innerHTML = "";
+                }
+            };
+
+        </script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
