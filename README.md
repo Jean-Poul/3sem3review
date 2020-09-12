@@ -9,7 +9,7 @@
 -------------------------------------------------------------------------------------------------
 ###### Monday: 
 
-https://github.com/Jean-Poul/travisGettingStarted
+https://github.com/Jean-Poul/travisGettingStarted  </br>
 https://github.com/Jean-Poul/rest-jpa-devops-startcode
 - (Setup of our first projects with travis. NOTE that these folders in this repository only have a reference to the projects since they are made on another repository)
 
