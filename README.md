@@ -5,7 +5,7 @@
   - flow1 week3 tuesday exercise
   - flow1 week3 wednesday exercise
   - flow1 week3 thursday exercise
-  - flow1 week3 thursday exercise
+  - flow1 week3 friday exercise
 -------------------------------------------------------------------------------------------------
 ###### Monday: 
 
