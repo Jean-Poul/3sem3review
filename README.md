@@ -7,6 +7,10 @@
   - flow1 week3 thursday exercise
   - flow1 week3 thursday exercise
 -------------------------------------------------------------------------------------------------
+
+Every assignment has been made and working. It has to be said that i'm getting CORS error
+while trying to fetch a table of all movies in "Movie API part two" with JavaScript.
+
 ###### Monday: 
 
 https://github.com/Jean-Poul/travisGettingStarted
@@ -30,7 +34,7 @@ https://github.com/Jean-Poul/3sem3review/tree/master/04_Thursday/domproject/src/
 
 ###### Friday: 
 
-https://jplm.dk/devops-starter-1.0.1/
+https://jplm.dk/devops-starter/
 
 - (To use REST endpoints type the commands shown below when viewing from friday link)
 - api/movie/count - count of database records
@@ -38,4 +42,4 @@ https://jplm.dk/devops-starter-1.0.1/
 - api/movie/ + (a number) - view a record on a specific id
 - api/movie/title/ + (title) - view a record from a title
 
-- alternative go to https://jplm.dk/devops-starter-1.0.1/ and use links from there
+- alternative go to https://jplm.dk/devops-starter/ and use links from there
